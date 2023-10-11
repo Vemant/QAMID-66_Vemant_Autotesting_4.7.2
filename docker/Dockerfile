@@ -1,5 +1,5 @@
-FROM node:erbium-alpine3.12
+FROM openjdk:8-slin
 WORKDIR /opt/app
 COPY db-api-for-docker.jar .
-CMD ["http://localhost:9999/api/cards"]
+CMD ["java", "-jar", "db-api-for-docker.jar"]
 EXPOSE 9999
